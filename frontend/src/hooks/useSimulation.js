@@ -30,7 +30,8 @@ export default function useSimulation() {
     if (!ALGORITHMS[algorithm]) return { timeline: [], metrics: [] };
 
     try {
-      const response = await fetch('http://localhost:5002/api/schedule', {
+      //const response = await fetch('http://localhost:5002/api/schedule', {
+      const response = await fetch('https://cpu-scheduling-simulator-with.onrender.com/api/schedule', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
